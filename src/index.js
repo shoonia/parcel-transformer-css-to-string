@@ -1,22 +1,35 @@
-const { Transformer } = require("@parcel/plugin");
+const { Transformer } = require('@parcel/plugin');
+const postcss = require('postcss');
+
+const { getConfig, createAssets } = require('./util.js');
 
 module.exports = new Transformer({
-  type: 'js',
-
   async canReuseAST() {
     return false;
   },
 
-  async transform({ asset, config, logger, resolve, options }) {
+  async transform({ asset }) {
     asset.type = 'js';
 
-    const code = await asset.getCode();
+    const [
+      code,
+      config,
+    ] = await Promise.all([
+      asset.getCode(),
+      getConfig(),
+    ]);
 
-    return [
-      {
-        type: 'js',
-        content: `module.exports = ${JSON.stringify(code)}`,
-      },
-    ];
-  }
+    const { plugins, options } = config;
+
+    if (plugins.length < 1) {
+      return createAssets(code);
+    }
+
+    const { css } = await postcss(plugins).process(code, {
+      from: asset.id,
+      ...options,
+    });
+
+    return createAssets(css);
+  },
 });
