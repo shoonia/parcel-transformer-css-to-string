@@ -8,7 +8,7 @@ Transform plugin for [Parcel v2](https://github.com/parcel-bundler/parcel)
 
 Importing CSS files as a string to JavaScript.
 
-**styles.css**
+**styles.inline.css**
 ```css
 .text {
   color: #162D3D;
