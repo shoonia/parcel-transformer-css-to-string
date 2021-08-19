@@ -3,6 +3,9 @@
   "version": "0.2.0",
   "description": "Importing CSS files as a string to JavaScript",
   "main": "src/index.js",
+  "scripts": {
+    "lint": "eslint src/**/*.js"
+  },
   "dependencies": {
     "cssnano": "^5.0.8",
     "postcss": "^8.3.6",
@@ -10,6 +13,9 @@
   },
   "peerDependencies": {
     "@parcel/plugin": "2.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0"
   },
   "keywords": [
     "parcel",
