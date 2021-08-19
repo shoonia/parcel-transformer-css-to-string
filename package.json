@@ -1,0 +1,34 @@
+{
+  "name": "parcel-transformer-css-to-string",
+  "version": "0.1.0",
+  "description": "Importing CSS files as a string to JavaScript",
+  "main": "src/index.js",
+  "keywords": [
+    "parcel",
+    "parcel-bundler",
+    "parcel-plugin",
+    "parcel-transformer",
+    "stringify",
+    "css",
+    "to-string"
+  ],
+  "files": [
+    "LICENSE",
+    "package.json",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shoonia/parcel-transformer-css-to-string.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shoonia/parcel-transformer-css-to-string/issues"
+  },
+  "homepage": "https://github.com/shoonia/parcel-transformer-css-to-string#readme",
+  "author": {
+    "name": "Alexander Zaytsev",
+    "email": "zaytsev126@gmail.com",
+    "url": "https://twitter.com/_shoonia"
+  },
+  "license": "MIT"
+}
