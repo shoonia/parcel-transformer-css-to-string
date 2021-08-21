@@ -2,7 +2,7 @@ exports.createAssets = (css) => {
   return [
     {
       type: 'js',
-      content: `module.exports = ${JSON.stringify(css)}`,
+      content: `export default ${JSON.stringify(css)}`,
     },
   ];
 };
