@@ -1,8 +1,14 @@
 const { Transformer } = require('@parcel/plugin');
 const postcss = require('postcss');
 
-const { createAssets } = require('./util.js');
 const { plugins, options } = require('./config.js');
+
+const createAssets = (asset, css) => {
+  asset.type = 'js';
+  asset.setCode(`export default ${JSON.stringify(css)}`);
+
+  return [asset];
+};
 
 module.exports = new Transformer({
   canReuseAST() {
@@ -10,12 +16,10 @@ module.exports = new Transformer({
   },
 
   async transform({ asset }) {
-    asset.type = 'js';
-
     const code = await asset.getCode();
 
     if (plugins.length < 1) {
-      return createAssets(code);
+      return createAssets(asset, code);
     }
 
     const { css } = await postcss(plugins).process(code, {
@@ -23,6 +27,6 @@ module.exports = new Transformer({
       ...options,
     });
 
-    return createAssets(css);
+    return createAssets(asset, css);
   },
 });
