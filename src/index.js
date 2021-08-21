@@ -5,7 +5,7 @@ const { createAssets } = require('./util.js');
 const { plugins, options } = require('./config.js');
 
 module.exports = new Transformer({
-  async canReuseAST() {
+  canReuseAST() {
     return false;
   },
 
