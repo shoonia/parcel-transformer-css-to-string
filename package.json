@@ -15,7 +15,11 @@
     "@parcel/plugin": "2.0.0"
   },
   "devDependencies": {
-    "eslint": "^7.32.0"
+    "eslint": "^7.32.0",
+    "simple-git-hooks": "^2.6.1"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npm run lint"
   },
   "keywords": [
     "parcel",
