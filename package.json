@@ -14,9 +14,18 @@
   "peerDependencies": {
     "@parcel/plugin": "2.0.0"
   },
+  "peerDependenciesMeta": {
+    "@parcel/plugin": {
+      "optional": true
+    }
+  },
   "devDependencies": {
     "eslint": "^7.32.0",
     "simple-git-hooks": "^2.6.1"
+  },
+  "engines": {
+    "node": "16",
+    "npm": "7"
   },
   "simple-git-hooks": {
     "pre-commit": "npm run lint"
