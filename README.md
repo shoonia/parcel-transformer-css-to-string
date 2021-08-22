@@ -1,12 +1,14 @@
 # parcel-transformer-css-to-string
 
-Transform plugin for [Parcel v2](https://github.com/parcel-bundler/parcel)
-
-> Transform pligin for Parcel v1: [parcel-plugin-css-to-string](https://github.com/shoonia/parcel-plugin-css-to-string)
-
-> in process...
+[![support parcel v2](https://img.shields.io/badge/Parcel-v2-3638f4)](https://github.com/parcel-bundler/parcel)
+[![test status](https://github.com/shoonia/parcel-transformer-css-to-string/workflows/test/badge.svg)](https://github.com/shoonia/parcel-transformer-css-to-string/actions)
+[![npm version](https://img.shields.io/npm/v/parcel-transformer-css-to-string.svg)](https://www.npmjs.com/package/parcel-transformer-css-to-string)
 
 Importing CSS files as a string to JavaScript.
+
+Transform plugin for **Parcel v2**
+
+> Support **Parcel v1**: [parcel-plugin-css-to-string](https://github.com/shoonia/parcel-plugin-css-to-string)
 
 ## Example
 
