@@ -1,6 +1,6 @@
 {
   "name": "parcel-transformer-css-to-string",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Importing CSS files as a string to JavaScript",
   "module": "src/index.js",
   "main": "cjs/index.js",
@@ -10,7 +10,8 @@
   },
   "scripts": {
     "lint": "eslint src/**/*.js",
-    "build": "babel src --out-dir cjs"
+    "build": "babel src --out-dir cjs",
+    "prepublish": "npm run lint && npm run build"
   },
   "dependencies": {
     "postcss-load-config": "^3.1.0"
