@@ -1,7 +1,7 @@
-const { Transformer } = require('@parcel/plugin');
-const postcss = require('postcss');
+import { Transformer } from '@parcel/plugin';
+import postcss from 'postcss';
 
-const { plugins, options } = require('./config.js');
+import { plugins, options } from './config.js';
 
 const createAssets = (asset, css) => {
   asset.type = 'js';
@@ -10,7 +10,7 @@ const createAssets = (asset, css) => {
   return [asset];
 };
 
-module.exports = new Transformer({
+export default new Transformer({
   canReuseAST() {
     return false;
   },
