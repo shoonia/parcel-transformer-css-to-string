@@ -1,6 +1,6 @@
-const postcssrc = require('postcss-load-config');
+import postcssrc from 'postcss-load-config';
 
-const { options, plugins } = (() => {
+export const { options, plugins } = (() => {
   try {
     return postcssrc.sync();
   } catch (error) {
@@ -14,6 +14,3 @@ const { options, plugins } = (() => {
     };
   }
 })();
-
-exports.options = options;
-exports.plugins = plugins;

@@ -9,6 +9,9 @@
     "ecmaVersion": 2020,
     "sourceType": "module"
   },
+  "ignorePatterns": [
+    "cjs/*"
+  ],
   "rules": {
     "linebreak-style": "off",
     "no-console": "off",
