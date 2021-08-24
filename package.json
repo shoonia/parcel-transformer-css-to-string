@@ -35,9 +35,9 @@
     "parcel-bundler",
     "parcel-plugin",
     "parcel-transformer",
-    "stringify",
     "css",
-    "to-string"
+    "webcomponents",
+    "web-components"
   ],
   "files": [
     "cjs",

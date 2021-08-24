@@ -16,7 +16,7 @@ Transform plugin for **Parcel v2**
 
 ```css
 .text {
-  color: #162D3D;
+  color: #000000;
 }
 ```
 
@@ -25,7 +25,13 @@ Transform plugin for **Parcel v2**
 ```js
 import styles from "./styles.inline.css";
 
-console.log(styles); // ".text{color:#162D3D}"
+console.log(styles);
+```
+
+**Result:**
+
+```js
+console.log(".text{color:#000}");
 ```
 
 ## Install
@@ -37,6 +43,10 @@ yarn add -D parcel-transformer-css-to-string
 ```
 
 ## How to use
+
+Add the plugin to `transformers` section in your `.parcelrc`.
+
+In example use a [Glob](https://en.wikipedia.org/wiki/Glob_(programming)) pattern for `*.inline.css` files that will be inlined as a string into JavaScript.
 
 **.parcelrc**
 
@@ -87,6 +97,35 @@ You can configure CSS transforming with PostCSS creating a configuration file us
     "cssnano": {}
   }
 }
+```
+
+## Alternative
+
+You can use official build-in named pipelines `bundle-text:`. In this case Parcel create a JavaScript module.
+
+**style.css**
+
+```css
+.text {
+  color: #000000;
+}
+```
+
+**index.js**
+
+```js
+import styles from "bundle-text:./styles.css";
+
+console.log(styles);
+```
+
+**Reslut:**
+
+```js
+/* Parcel module system is going here...  */
+
+t("euGYv").register(JSON.parse('{"lhRnf":"index.js"}'));
+console.log(e(".text{color:#000}"))
 ```
 
 ## License
