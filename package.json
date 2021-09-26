@@ -1,6 +1,6 @@
 {
   "name": "parcel-transformer-css-to-string",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "Importing CSS files as a string to JavaScript",
   "type": "module",
   "main": "cjs/index.js",
