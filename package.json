@@ -25,9 +25,9 @@
     "postcss": "^8.0.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.14.8",
-    "@babel/core": "^7.15.0",
-    "@babel/plugin-transform-modules-commonjs": "^7.15.0",
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.5",
+    "@babel/plugin-transform-modules-commonjs": "^7.15.4",
     "eslint": "^7.32.0",
     "simple-git-hooks": "^2.6.1"
   },
