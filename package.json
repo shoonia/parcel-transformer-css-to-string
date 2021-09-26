@@ -2,11 +2,15 @@
   "name": "parcel-transformer-css-to-string",
   "version": "0.7.0",
   "description": "Importing CSS files as a string to JavaScript",
-  "module": "src/index.js",
+  "type": "module",
   "main": "cjs/index.js",
+  "module": "src/index.js",
   "exports": {
-    "import": "./src/index.js",
-    "require": "./cjs/index.js"
+    ".": {
+      "require": "./cjs/index.js",
+      "import": "./src/index.js",
+      "default": "./src/index.js"
+    }
   },
   "scripts": {
     "lint": "eslint src/**/*.js",
