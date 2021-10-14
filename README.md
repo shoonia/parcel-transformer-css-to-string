@@ -23,7 +23,7 @@ Transform plugin for **Parcel v2**
 **index.js**
 
 ```js
-import styles from "./styles.inline.css";
+import styles from './styles.inline.css';
 
 document.body.insertAdjacentHTML('beforeend', `<style>${styles}</style>`);
 ```
@@ -115,7 +115,7 @@ You can use official build-in named pipelines `bundle-text:`. In this case Parce
 **index.js**
 
 ```js
-import styles from "bundle-text:./styles.css";
+import styles from 'bundle-text:./styles.css';
 
 document.body.insertAdjacentHTML('beforeend', `<style>${styles}</style>`);
 ```
