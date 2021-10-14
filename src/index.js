@@ -29,7 +29,7 @@ const createAssets = (asset, css) => {
   return [asset];
 };
 
-export default new Transformer({
+const plugin = new Transformer({
   canReuseAST() {
     return false;
   },
@@ -74,3 +74,5 @@ export default new Transformer({
     return createAssets(asset, css);
   },
 });
+
+export { plugin as default };
