@@ -25,13 +25,14 @@ Transform plugin for **Parcel v2**
 ```js
 import styles from "./styles.inline.css";
 
-console.log(styles);
+document.body.insertAdjacentHTML('beforeend', `<style>${styles}</style>`);
 ```
 
 **Result:**
 
 ```js
-console.log(".text{color:#000}");
+document.body.insertAdjacentHTML("beforeend","<style>.text{color:#000}</style>");
+//# sourceMappingURL=index.js.map
 ```
 
 ## Install
@@ -116,16 +117,14 @@ You can use official build-in named pipelines `bundle-text:`. In this case Parce
 ```js
 import styles from "bundle-text:./styles.css";
 
-console.log(styles);
+document.body.insertAdjacentHTML('beforeend', `<style>${styles}</style>`);
 ```
 
 **Reslut:**
 
 ```js
-/* Parcel module system is going here...  */
-
-t("euGYv").register(JSON.parse('{"lhRnf":"index.js"}'));
-console.log(e(".text{color:#000}"))
+function e(e){return e&&e.__esModule?e.default:e}document.body.insertAdjacentHTML("beforeend",`<style>${e(".text{color:#000}")}</style>`);
+//# sourceMappingURL=index.js.map
 ```
 
 ## License
